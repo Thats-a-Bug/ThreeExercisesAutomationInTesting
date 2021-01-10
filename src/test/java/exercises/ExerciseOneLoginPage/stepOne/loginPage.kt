@@ -1,4 +1,4 @@
-package exercises.`1LoginPage`.stepOne
+package exercises.ExerciseOneLoginPage.stepOne
 
 import exercises.TestBase
 import org.junit.jupiter.api.Test
