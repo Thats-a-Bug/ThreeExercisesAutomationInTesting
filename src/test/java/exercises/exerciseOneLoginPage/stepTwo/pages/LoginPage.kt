@@ -1,12 +1,13 @@
-package exercises.ExerciseOneLoginPage.stepTwo.pages
+package exercises.exerciseOneLoginPage.stepTwo.pages
 
 import org.openqa.selenium.By
-import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.WebDriver
 
-class LoginPage(private val driver: ChromeDriver) {
+class LoginPage(private val driver: WebDriver): Page(driver) {
 
     init {
         driver.get("https://the-internet.herokuapp.com/login")
+        initPage()
     }
 
     fun login(username: String, password: String): SecureAreaPage {
@@ -22,15 +23,15 @@ class LoginPage(private val driver: ChromeDriver) {
     }
 
     private fun fillUsernameField(username: String) {
-        driver.findElement(By.id("username")).sendKeys(username)
+        baseLocator.findElement(By.id("username")).sendKeys(username)
     }
 
     private fun fillPasswordField(password: String) {
-        driver.findElement(By.id("password")).sendKeys(password)
+        baseLocator.findElement(By.id("password")).sendKeys(password)
     }
 
     private fun performLogin() {
-        driver.findElement(By.tagName("button")).click()
+        baseLocator.findElement(By.tagName("button")).click()
     }
 
     private fun waitLoggedInPage() {

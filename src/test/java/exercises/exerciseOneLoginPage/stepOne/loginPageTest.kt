@@ -1,9 +1,10 @@
-package exercises.ExerciseOneLoginPage.stepOne
+package exercises.exerciseOneLoginPage.stepOne
 
 import exercises.TestBase
 import org.junit.jupiter.api.Test
 import org.openqa.selenium.By
 import assertk.assertThat
+import assertk.assertions.isEqualTo
 
 class LoginPageTest: TestBase() {
 
@@ -56,14 +57,13 @@ class LoginPageTest: TestBase() {
     }
 
     private fun verifyTitle(title: String) {
-        assertThat(driver.findElement(By.tagName("h2")).equals(title))
+        assertThat(driver.findElement(By.tagName("h2"))).isEqualTo(title)
     }
 
     private fun verifySubTitle(subtitle: String) {
         assertThat(
             driver.findElement(By.tagName("h4"))
-                .equals(subtitle)
-        )
+        ).isEqualTo(subtitle)
     }
 
 }

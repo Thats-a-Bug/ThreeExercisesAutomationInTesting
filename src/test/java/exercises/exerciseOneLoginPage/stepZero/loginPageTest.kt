@@ -1,9 +1,10 @@
-package exercises.ExerciseOneLoginPage.stepZero
+package exercises.exerciseOneLoginPage.stepZero
 
 import exercises.TestBase
 import org.junit.jupiter.api.Test
 import org.openqa.selenium.By
 import assertk.assertThat
+import assertk.assertions.isEqualTo
 
 class LoginPageTest: TestBase() {
 
@@ -17,7 +18,7 @@ class LoginPageTest: TestBase() {
 
         Thread.sleep(2000)
 
-        assertThat(driver.findElement(By.tagName("h2")).equals("Secure Area"))
-        assertThat(driver.findElement(By.tagName("h4")).equals("Welcome to the Secure Area. When you are done click logout below."))
+        assertThat(driver.findElement(By.tagName("h2"))).isEqualTo("Secure Area")
+        assertThat(driver.findElement(By.tagName("h4"))).isEqualTo("Welcome to the Secure Area. When you are done click logout below.")
     }
 }

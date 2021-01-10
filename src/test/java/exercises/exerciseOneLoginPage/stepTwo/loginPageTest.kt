@@ -1,10 +1,11 @@
-package exercises.ExerciseOneLoginPage.stepTwo
+package exercises.exerciseOneLoginPage.stepTwo
 
 import exercises.TestBase
 import org.junit.jupiter.api.Test
 import assertk.assertThat
-import exercises.ExerciseOneLoginPage.stepTwo.pages.LoginPage
-import exercises.ExerciseOneLoginPage.stepTwo.pages.SecureAreaPage
+import assertk.assertions.isEqualTo
+import exercises.exerciseOneLoginPage.stepTwo.pages.LoginPage
+import exercises.exerciseOneLoginPage.stepTwo.pages.SecureAreaPage
 
 class LoginPageTest: TestBase() {
 
@@ -27,11 +28,11 @@ class LoginPageTest: TestBase() {
     }
 
     private fun verifyTitle(title: String, secureAreaPage: SecureAreaPage) {
-        assertThat(secureAreaPage.titleText).equals(title)
+        assertThat(secureAreaPage.titleText).isEqualTo(title)
     }
 
     private fun verifySubTitle(subtitle: String, secureAreaPage: SecureAreaPage) {
-        assertThat(secureAreaPage.subtitleText).equals(subtitle)
+        assertThat(secureAreaPage.subtitleText).isEqualTo(subtitle)
     }
 
 }
