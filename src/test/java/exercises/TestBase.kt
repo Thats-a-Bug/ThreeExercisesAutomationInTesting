@@ -1,14 +1,12 @@
-package exercises.`1LoginPage`
+package exercises
 
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 
-class LoginPageTest {
-
-    private lateinit var driver: ChromeDriver
+abstract class TestBase {
+    protected lateinit var driver: ChromeDriver
 
     @BeforeEach
     fun setupBrowser() {
@@ -21,10 +19,5 @@ class LoginPageTest {
     @AfterEach
     fun killBrowser() {
         driver.quit()
-    }
-
-    @Test
-    fun shouldShowSimpleAssertion() {
-        driver.get("http://www.thatsabug.com")
     }
 }

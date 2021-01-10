@@ -14,6 +14,7 @@
         <kotlin.version>1.4.30-M1</kotlin.version>
         <selenium.version>4.0.0-alpha-5</selenium.version>
         <kotlin-test-junit5.version>1.4.30-M1</kotlin-test-junit5.version>
+        <assertk.version>0.23</assertk.version>
     </properties>
 
     <dependencies>
@@ -37,6 +38,12 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test-junit5</artifactId>
             <version>${kotlin-test-junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.willowtreeapps.assertk</groupId>
+            <artifactId>assertk-jvm</artifactId>
+            <version>${assertk.version}</version>
             <scope>test</scope>
         </dependency>
 
