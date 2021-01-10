@@ -8,7 +8,6 @@ import assertk.assertions.isTrue
 import exercises.exerciseOneLoginPage.stepFour.data.UserCredentials
 import exercises.exerciseOneLoginPage.stepFour.pages.loginPage.LoginPage
 import exercises.exerciseOneLoginPage.stepFour.pages.secureAreaPage.SecureAreaPage
-import org.junit.jupiter.api.RepeatedTest
 
 class LoginPageTest: TestBase() {
 
